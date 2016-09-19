@@ -30,3 +30,5 @@ C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\WindowsFormsApplicatio
 C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\WindowsFormsApplication1\obj\Debug\TestWinform.csproj.GenerateResource.Cache
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\WindowsFormsApplication1\bin\Debug\itextsharp.dll
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\WindowsFormsApplication1\bin\Debug\itextsharp.xml

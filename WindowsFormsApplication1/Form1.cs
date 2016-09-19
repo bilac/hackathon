@@ -6,6 +6,9 @@ using Sharpenter.ResumeParser.ResumeProcessor.Helpers;
 using IFilterTextReader;
 using System.IO;
 using System.Diagnostics;
+using iTextSharp.text.pdf;
+using System.Text;
+using iTextSharp.text.pdf.parser;
 
 namespace WindowsFormsApplication1
 {
@@ -31,11 +34,31 @@ namespace WindowsFormsApplication1
             {
                 txtFolderSave.Text = openFileDialog1.FileName;
             }
-            TextReader reader = new FilterReader(txtFolderSave.Text);
+
             string raw;
-            using (reader)
+            try
             {
-               raw = reader.ReadToEnd();
+                TextReader reader = new FilterReader(txtFolderSave.Text);
+                
+                using (reader)
+                {
+                    raw = reader.ReadToEnd();
+                }
+            }
+            catch
+            {
+                using (PdfReader reader = new PdfReader(txtFolderSave.Text))
+                {
+                    StringBuilder sb = new StringBuilder();
+
+                    for (int page = 0; page < reader.NumberOfPages; page++)
+                    {
+                        string text = PdfTextExtractor.GetTextFromPage(reader, page + 1, new SimpleTextExtractionStrategy());
+                        if (!string.IsNullOrWhiteSpace(text))
+                            sb.Append(text);
+                    }
+                    raw = sb.ToString();
+                }
             }
             var processor = new ResumeProcessor(new JsonOutputFormatter());
             string filename = StringHelper.RandomString(6) + ".json";

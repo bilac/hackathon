@@ -11,23 +11,7 @@ using System.Net;
 
 namespace Sharpenter.ResumeParser.ResumeProcessor
 {
-    public class Detection
-    {
-        public string language { get; set; }
-        public bool isReliable { get; set; }
-        public float confidence { get; set; }
-    }
-
-    public class ResultData
-    {
-        public List<Detection> detections { get; set; }
-    }
-
-    public class Result
-    {
-        public ResultData data { get; set; }
-    }
-
+  
     public class ResumeProcessor
     {
         private readonly IOutputFormatter _outputFormatter;
@@ -51,10 +35,10 @@ namespace Sharpenter.ResumeParser.ResumeProcessor
 
         }
 
-        public static Resume resume = new Resume();
+        public static Resume resume;
         public string Process(string location)
         {
-
+            resume = new Resume();
             try
             {
                 var rawInput = location.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None); ;
