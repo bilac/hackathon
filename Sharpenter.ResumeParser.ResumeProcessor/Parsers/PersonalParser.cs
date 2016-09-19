@@ -139,7 +139,14 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
 
         private bool ExtractAddress(Resume resume, bool addressFound, string line)
         {
-
+            if (line.IndexOf("địa chỉ tạm trú", StringComparison.InvariantCultureIgnoreCase) > -1)
+            {
+                addressFound = true;
+                line = line.Substring(line.IndexOf("địa chỉ tạm trú", StringComparison.InvariantCultureIgnoreCase) + 15);
+                line = StringHelper.RemoveSpecialCharacters(line);
+                resume.AddressFull = line;
+                return addressFound;
+            }
             if (addressFound) return addressFound;
 
             // english
@@ -160,14 +167,7 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
                 return addressFound;
             }
             // vietnamese
-            if (line.IndexOf("địa chỉ tạm trú", StringComparison.InvariantCultureIgnoreCase) > -1)
-            {
-                addressFound = true;
-                line = line.Substring(line.IndexOf("địa chỉ tạm trú", StringComparison.InvariantCultureIgnoreCase) + 15);
-                line = StringHelper.RemoveSpecialCharacters(line);
-                resume.AddressFull = line;
-                return addressFound;
-            }
+           
             if (line.IndexOf("địa chỉ", StringComparison.InvariantCultureIgnoreCase) > -1)
             {
                 addressFound = true;
@@ -182,7 +182,7 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
             if (country != null)
             {
                 resume.AddressFull = line;
-                resume.Country = line.Substring(line.IndexOf(country.Trim()), country.Trim().Length);
+             //   resume.Country = line.Substring(line.IndexOf(country.Trim()), country.Trim().Length);
 
             }
             //Assume address is in one line and ending with country name

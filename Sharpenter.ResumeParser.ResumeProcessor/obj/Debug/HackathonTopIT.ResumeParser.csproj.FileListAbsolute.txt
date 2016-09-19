@@ -12,3 +12,17 @@ C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\Sharpenter.ResumeParser.ResumeP
 C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
 C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
 C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\HackathonTopIT.ResumeParser.csprojResolveAssemblyReference.cache
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\IFilterTextReader.dll
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\IvanAkcheurov.Commons.dll
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\IvanAkcheurov.NClassify.dll
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\IFilterTextReader.pdb
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\IFilterTextReader.xml
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\IvanAkcheurov.Commons.xml
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\IvanAkcheurov.NClassify.xml
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\HackathonTopIT.ResumeParser.csprojResolveAssemblyReference.cache
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
+C:\Users\Bi Lac\Source\Repos\hackathon.TopIT.ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
