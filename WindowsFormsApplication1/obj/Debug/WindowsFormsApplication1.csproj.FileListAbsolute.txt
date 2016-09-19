@@ -1,0 +1,16 @@
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\IFilterTextReader.dll
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\IFilterTextReader.pdb
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\IFilterTextReader.xml
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
+C:\Users\Bi Lac\Desktop\ResumeParser-lite-master\WindowsFormsApplication1\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
