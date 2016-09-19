@@ -1,4 +1,5 @@
-#Run : yêu cầu .net 4.5 và kết nối mạng !
+#Run : 
+0. Yêu cầu .net 4.5 
 1. Git Clone : https://github.com/bilac/hackathon.git
 2. Chạy file "\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe" hoặc mở solution bằng VS 2016 chạy debug.
 3. Bấm nút parser chọn resume muốn parser . Chương trình sẽ tạo ra 1 file json chứa các thông tin extract.
