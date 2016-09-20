@@ -124,14 +124,16 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
             {
                 int index = line.IndexOf("birth", StringComparison.InvariantCultureIgnoreCase) + 5;
                 resume.DOB = line.Substring(index).Trim();
-                resume.DOB = resume.DOB.Substring(Regex.Match(resume.DOB, @"\d").Index);
+                resume.DOB = resume.DOB.Substring(Regex.Match(resume.DOB, @"[A-z0-9a-z]").Index);
+
+                //  resume.DOB = DateHelper.StringDate(resume.DOB);
                 dobFound = true;
             }
             if (line.IndexOf(" sinh", StringComparison.InvariantCultureIgnoreCase) > -1)
             {
                 int index = line.IndexOf(" sinh", StringComparison.InvariantCultureIgnoreCase) + 5;
                 resume.DOB = line.Substring(index).Trim();
-                resume.DOB = resume.DOB.Substring(Regex.Match(resume.DOB, @"\d").Index);
+                resume.DOB = resume.DOB.Substring(Regex.Match(resume.DOB, @"[A-z0-9a-z]").Index);
                 dobFound = true;
             }
             return dobFound;

@@ -14,7 +14,7 @@ namespace Sharpenter.ResumeParser.ResumeProcessor
         public SectionExtractor()
         {
             _sectionMatchingService = new SectionMatchingService();
-            if (ResumeProcessor.resume.resumeLanguage == "vi") SectionTitleNumberOfWordsLimit = 8;
+            if (ResumeProcessor.resume.resumeLanguage == "vi") SectionTitleNumberOfWordsLimit = 10;
         }
 
         public IList<Section> ExtractFrom(IList<string> rawInput)
