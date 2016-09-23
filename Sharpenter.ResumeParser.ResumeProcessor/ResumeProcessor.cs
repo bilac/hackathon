@@ -70,9 +70,9 @@ namespace Sharpenter.ResumeParser.ResumeProcessor
 
                 IResourceLoader resourceLoader = new CachedResourceLoader(new ResourceLoader());
                 var resumeBuilder = new ResumeBuilder(resourceLoader);
-                var 1resume = resumeBuilder.Build(sections);
+                var resume1 = resumeBuilder.Build(sections);
 
-                var formatted = _outputFormatter.Format(1resume);
+                var formatted = _outputFormatter.Format(resume1);
 
                 return formatted;
             }
