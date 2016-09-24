@@ -70,7 +70,7 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
                 if (country != null)
                 {
                     resume.County_State = country;
-                    resume.StreetAddress = resume.AddressFull.Substring(0,resume.AddressFull.IndexOf(country.Trim()));
+                    resume.StreetAddress = resume.AddressFull.Substring(0, resume.AddressFull.IndexOf(country.Trim()));
                 }
             }
         }
@@ -169,7 +169,7 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
                 return addressFound;
             }
             // vietnamese
-           
+
             if (line.IndexOf("địa chỉ", StringComparison.InvariantCultureIgnoreCase) > -1)
             {
                 addressFound = true;
@@ -184,7 +184,7 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
             if (country != null)
             {
                 resume.AddressFull = line;
-             //   resume.Country = line.Substring(line.IndexOf(country.Trim()), country.Trim().Length);
+                //   resume.Country = line.Substring(line.IndexOf(country.Trim()), country.Trim().Length);
 
             }
             //Assume address is in one line and ending with country name
@@ -302,43 +302,43 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
                 Stream streamOut;
 
 
+                if (!string.IsNullOrEmpty(resume.AddressFull))
+                    if (!firstNameFound && _firstNameLookUp.Contains(word) && !resume.AddressFull.Contains(word))
+                    {
+                        resume.FirstName = word;
 
-                if (!firstNameFound && _firstNameLookUp.Contains(word) && !resume.AddressFull.Contains(word))
-                {
-                    resume.FirstName = word;
+                        //Consider the rest of the line as part of last name
+                        resume.LastName = string.Join(" ", words.Skip(i + 1));
 
-                    //Consider the rest of the line as part of last name
-                    resume.LastName = string.Join(" ", words.Skip(i + 1));
-
-                    firstNameFound = true;
-                }
-                else if (!firstNameFound)
-                {
-                    //System.Net.WebRequest request = System.Net.WebRequest.Create(String.Format("https://api.genderize.io/?name={0}", word));
-                    //request.Method = "GET";
-
-
-                    //System.Net.WebResponse response = request.GetResponse();
-                    //streamOut = response.GetResponseStream();
-                    //output = new StreamReader(streamOut).ReadToEnd();
-                    //Object obj = Newtonsoft.Json.JsonConvert.DeserializeObject(output);
+                        firstNameFound = true;
+                    }
+                    else if (!firstNameFound)
+                    {
+                        //System.Net.WebRequest request = System.Net.WebRequest.Create(String.Format("https://api.genderize.io/?name={0}", word));
+                        //request.Method = "GET";
 
 
+                        //System.Net.WebResponse response = request.GetResponse();
+                        //streamOut = response.GetResponseStream();
+                        //output = new StreamReader(streamOut).ReadToEnd();
+                        //Object obj = Newtonsoft.Json.JsonConvert.DeserializeObject(output);
 
-                    //JObject jObject = JObject.Parse(output);
 
-                    //gender = jObject.GetValue("gender", StringComparison.OrdinalIgnoreCase).ToString();
-                    //resume.Gender = gender;
 
-                    //if (!String.IsNullOrEmpty(resume.Gender))
-                    //{
-                    //    resume.Gender = gender;
-                    //    resume.FirstName = jObject.GetValue("name", StringComparison.OrdinalIgnoreCase).ToString();
-                    //    resume.LastName = string.Join(" ", words.Skip(i + 1));
-                    //    firstNameFound = true;
-                    //    break;
-                    //}
-                }
+                        //JObject jObject = JObject.Parse(output);
+
+                        //gender = jObject.GetValue("gender", StringComparison.OrdinalIgnoreCase).ToString();
+                        //resume.Gender = gender;
+
+                        //if (!String.IsNullOrEmpty(resume.Gender))
+                        //{
+                        //    resume.Gender = gender;
+                        //    resume.FirstName = jObject.GetValue("name", StringComparison.OrdinalIgnoreCase).ToString();
+                        //    resume.LastName = string.Join(" ", words.Skip(i + 1));
+                        //    firstNameFound = true;
+                        //    break;
+                        //}
+                    }
             }
             return firstNameFound;
         }

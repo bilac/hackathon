@@ -11,7 +11,7 @@ using System.Net;
 
 namespace Sharpenter.ResumeParser.ResumeProcessor
 {
-  
+
     public class ResumeProcessor
     {
         private readonly IOutputFormatter _outputFormatter;
@@ -39,47 +39,51 @@ namespace Sharpenter.ResumeParser.ResumeProcessor
         public string Process(string location)
         {
             resume = new Resume();
-            try
-            {
-                var rawInput = location.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None); ;
+            //try
+            //{
+            var rawInput = location.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None); ;
 
 
-                using (WebClient client = new WebClient()) // WebClient class inherits IDisposable
-                {
-                    string querytemp = rawInput.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur);
-                    if (querytemp.Length > 11) querytemp = querytemp.Substring(0, 10);
-                    string htmlCode = client.DownloadString("http://ws.detectlanguage.com/0.2/detect?q=" + querytemp + "&key=3580bdeda1fa9ec0d1985d6c6b432334");
-                    htmlCode = htmlCode.Substring(htmlCode.IndexOf("language") + 11);
-                    htmlCode = htmlCode.Substring(0, htmlCode.IndexOf(",") - 1);
-                    ResumeProcessor.resume.resumeLanguage = htmlCode;
-                }
-                var sectionExtractor = new SectionExtractor();
-                var sections = sectionExtractor.ExtractFrom(rawInput);
+            //using (WebClient client = new WebClient()) // WebClient class inherits IDisposable
+            //{
+            //    string querytemp = rawInput.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur);
+            //    if (querytemp.Length > 11) querytemp = querytemp.Substring(0, 10);
+            //    string htmlCode = client.DownloadString("http://ws.detectlanguage.com/0.2/detect?q=" + querytemp + "&key=3580bdeda1fa9ec0d1985d6c6b432334");
+            //    htmlCode = htmlCode.Substring(htmlCode.IndexOf("language") + 11);
+            //    htmlCode = htmlCode.Substring(0, htmlCode.IndexOf(",") - 1);
+            //    ResumeProcessor.resume.resumeLanguage = htmlCode;
+            //}
+            string checktext = rawInput.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur);
+            resume.resumeLanguage = LanguageHelper.IdentifyLanguage(checktext);
 
-                string temp = "";
-                foreach (var item in sections)
-                {
-                    temp += "-------------------------------------\r\n";
-                    temp += item.Type.ToString() + "\r\n";
-                    foreach (var item1 in item.Content)
-                    {
-                        temp += item1 + "\r\n";
-                    }
-                }
-                //return temp;
+            var sectionExtractor = new SectionExtractor();
+            var sections = sectionExtractor.ExtractFrom(rawInput);
 
-                IResourceLoader resourceLoader = new CachedResourceLoader(new ResourceLoader());
-                var resumeBuilder = new ResumeBuilder(resourceLoader);
-                var resume1 = resumeBuilder.Build(sections);
+            //string temp = "";
+            //foreach (var item in sections)
+            //{
+            //    temp += "-------------------------------------\r\n";
+            //    temp += item.Type.ToString() + "\r\n";
+            //    foreach (var item1 in item.Content)
+            //    {
+            //        temp += item1 + "\r\n";
+            //    }
+            //}
+            //return temp;
 
-                var formatted = _outputFormatter.Format(resume1);
+            IResourceLoader resourceLoader = new CachedResourceLoader(new ResourceLoader());
+            var resumeBuilder = new ResumeBuilder(resourceLoader);
+            var resume1 = resumeBuilder.Build(sections);
 
-                return formatted;
-            }
-            catch (IOException ex)
-            {
-                throw new ResumeParserException("There's a problem accessing the file, it might still being opened by other application", ex);
-            }
+            var formatted = _outputFormatter.Format(resume1);
+
+            return formatted;
+            //}
+            //catch (IOException ex)
+            //{
+            //    //throw new ResumeParserException(ex.Data.ToString());
+            //    //throw new ResumeParserException("There's a problem accessing the file, it might still being opened by other application", ex);
+            //}
         }
     }
 }
