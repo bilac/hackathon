@@ -10,12 +10,12 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Helpers
         private static readonly Regex StartAndEndDateRegex =
             new Regex(
                 string.Format(
-                    @"(?<Start>({0}|{1}|\d{{1,2}}|.)[/\s-–](20)?\d{{2}})[/\s-–— ]+(?<End>({0}|{1}|\d{{1,2}}|.)[/\s-– ](20)?\d{{2}}|Current|Now|Present|Hiện tại|Nay|Bây giờ|nay|hiện tại)",
+                    @"(?<Start>({0}|{1}|\d{{1,2}}|.)[/\s-–](20)?\d{{2}})[/\s-–—tođến ]+(?<End>({0}|{1}|\d{{1,2}}|.)[/\s-– ](20)?\d{{2}}|Current|Now|Present|Hiện tại|Nay|Bây giờ|nay|hiện tại)",
                     ShortMonth, FullMonth), RegexOptions.Compiled);
         private static readonly Regex StartAndEndDateRegex_Years =
          new Regex(
              string.Format(
-                   @"(?<Start>(20)?\d{{2}})[/\s-–— ]+(?<End>(20)?\d{{2}}|Current|Now|Present|Hiện tại|Nay|Bây giờ|nay|hiện tại)",
+                   @"(?<Start>(20)?\d{{2}})[/\s-–—to ]+(?<End>(20)?\d{{2}}|Current|Now|Present|Hiện tại|Nay|Bây giờ|nay|hiện tại)",
                  ShortMonth, FullMonth), RegexOptions.Compiled);
         private static readonly Regex StartAndEndDateRegex_1Years =
        new Regex(

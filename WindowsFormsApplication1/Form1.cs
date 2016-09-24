@@ -68,19 +68,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

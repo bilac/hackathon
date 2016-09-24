@@ -1,0 +1,41 @@
+{
+  "resume-language": "vi",
+  "first-name": "Nguyen",
+  "last-name": "Duy",
+  "salutation": null,
+  "d-o-b": "22-01-1988",
+  "nationality": "Việt Nam",
+  "street-address": "An phú - Thuận An -",
+  "town": null,
+  "county_state": "Bình Dương ",
+  "country": null,
+  "post-code": null,
+  "gender": "nam",
+  "email-address": "testing@gmail.com",
+  "home-phone": null,
+  "mobile-phone": "01677 555 666",
+  "work-phone": null,
+  "fax": null,
+  "address-full": "An phú - Thuận An -Bình Dương",
+  "position_expected": null,
+  "salary_expected": null,
+  "relocation": null,
+  "location_expected": null,
+  "marital_status": "độc thân",
+  "skills": [],
+  "positions": [],
+  "projects": [],
+  "social-profiles": [],
+  "educations": [
+    {
+      "school": "trường ĐH CÔNG NGHIỆP TP HCM",
+      "degree": null,
+      "start-date": "2006",
+      "end-date": "2010",
+      "description": null,
+      "location": null
+    }
+  ],
+  "courses": null,
+  "awards": []
+}

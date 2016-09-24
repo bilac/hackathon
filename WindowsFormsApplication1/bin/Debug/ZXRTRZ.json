@@ -1,0 +1,128 @@
+{
+  "resume-language": "vi",
+  "first-name": "Nguyen",
+  "last-name": "Duy",
+  "salutation": null,
+  "d-o-b": "22-01-1988",
+  "nationality": "Việt Nam",
+  "street-address": "An phú - Thuận An -",
+  "town": null,
+  "county_state": "Bình Dương ",
+  "country": null,
+  "post-code": null,
+  "gender": "nam",
+  "email-address": "testing@gmail.com",
+  "home-phone": null,
+  "mobile-phone": "01677 555 666",
+  "work-phone": null,
+  "fax": null,
+  "address-full": "An phú - Thuận An -Bình Dương",
+  "position_expected": null,
+  "salary_expected": null,
+  "relocation": null,
+  "location_expected": null,
+  "marital_status": "độc thân",
+  "skills": [
+    "- Tôi là một người chăm chỉ",
+    "có trách nhiệm và nhiệt tình. Tôi rất có tổ chức và chịu được áp lực công việc.Tôi thích làm việc theo nhóm và tôi cũng có thể làm việc độc lập rất hiệu quả.",
+    "Sử dụng AutoCAD 2D",
+    "đọc hiểu bản vẽ",
+    "lập bản vẽ chế tạo các chi tiết máy.",
+    "- Sử dụng phần mềm thiết kế 3D SolidWorks",
+    "- Có kiến thức về quy trình gia công cơ khí.",
+    "Caliper",
+    "Micromester",
+    "Master",
+    "Pin gause",
+    "Bore gause",
+    "Thread gause",
+    "Dial gause",
+    "Push Pull Gause",
+    "Micro Scope",
+    "kiểm tra độ cứng bằng máy Rockwell.",
+    "- Hiểu biết về 7 thanh công cụ QC",
+    "và kỹ năng phân tích lỗi."
+  ],
+  "positions": [
+    {
+      "employeer": null,
+      "start-date": null,
+      "end-date": null,
+      "location": "6/ to  - Công ty Chế Tạo Máy Dược Phẩm TIẾN TUẤN",
+      "position_held": null,
+      "description": [
+        "   Nhân viên kỹ thuật sản xuất",
+        "  Trách nhiệm chính:",
+        "Lập quy trình công nghệ quản lý chất lượng công đoạn",
+        "Đề xuất vật tư, nhận và kiểm tra phôi.",
+        "Giao các bộ phận gia công , quản lý tiến độ và chất lượng theo quy trình công nghệ",
+        "Kiểm tra chất lượng sản phẩm sau mỗi công đoạn theo quy trình công nghệ",
+        "Tham gia giám sát lắp ráp ( xem xét mức độ ảnh hưởng đến chất lượng)"
+      ]
+    },
+    {
+      "employeer": null,
+      "start-date": null,
+      "end-date": null,
+      "location": "Công ty Nidec Copal Precision",
+      "position_held": null,
+      "description": [
+        "  Nhân viên kỹ thuật sản xuất",
+        "  Trách nhiệm chính:",
+        "Theo dõi mã hàng mới ( làm quy trình quản lý chất lượng công đoạn, bảng hướng dẫn công việc, hổ trợ cài thông số máy,lấy dữ liệu và làm báo cáo đánh giá First Lot)",
+        "Đánh giá thay đổi 4M ( giảm người, thay đổi máy, thay đổi vật liệu, thay đổi quy trình)→Làm hàng mẫu và báo cáo kết quả đánh giá→Gởi qua QA test",
+        "Phân tích lỗi ( 3 lỗi cao nhất theo dữ liệu sản xuất hàng tuần) →Phân tích lỗi theo biểu đồ nguyên nhân kết quả→đề xuất cải tiến",
+        "Cập nhật và  chỉnh sửa Quy trình quản lý chất lượng công đoạn",
+        "Đánh giá sửa hàng lỗi ( xem xét mức độ ảnh hưởng của lỗi→phương pháp sửa)",
+        "Đánh giá tái sử dụng nguyên vật liệu",
+        ": 4/2015 đến 7/2015 - SST FOUNDRY CO., LTD",
+        "  Kỹ sư quy trình",
+        "  Trách nhiệm chính:",
+        "Lập quy trình quản lý chất lượng công đoạn",
+        "Lập bảng hướng dẫn công việc",
+        "Cải tiến và cập nhật quy trình quản lý chất lượng công đoạn",
+        "Hổ trợ lập FMEA & Control plan",
+        "Hổ trợ tính năng lực công đoạn",
+        "Hổ trợ phân tích các hạng mục lỗi."
+      ]
+    }
+  ],
+  "projects": [],
+  "social-profiles": [],
+  "educations": [
+    {
+      "school": "trường ĐH CÔNG NGHIỆP TP HCM",
+      "degree": null,
+      "start-date": "2006",
+      "end-date": "2010",
+      "description": null,
+      "location": null
+    },
+    {
+      "school": "trung tâm NEPTECH",
+      "degree": null,
+      "start-date": "7/2008",
+      "end-date": "9/2008",
+      "description": null,
+      "location": null
+    },
+    {
+      "school": "Trường ĐH CÔNG NGHIỆP TP HCM",
+      "degree": null,
+      "start-date": "2010",
+      "end-date": "2010",
+      "description": null,
+      "location": null
+    },
+    {
+      "school": "Trường ĐH CÔNG NGHIỆP TP HCM",
+      "degree": null,
+      "start-date": "2011",
+      "end-date": "2011",
+      "description": null,
+      "location": null
+    }
+  ],
+  "courses": null,
+  "awards": []
+}

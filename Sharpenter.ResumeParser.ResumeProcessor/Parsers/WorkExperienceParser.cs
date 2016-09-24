@@ -11,10 +11,10 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
 {
     public class WorkExperienceParser : IParser
     {
-        private static readonly Regex SplitByWhiteSpaceRegex = new Regex(@"\s+", RegexOptions.Compiled);        
+        private static readonly Regex SplitByWhiteSpaceRegex = new Regex(@"\s+", RegexOptions.Compiled);
         private readonly List<string> _jobLookUp;
         private readonly List<string> _countryLookUp;
-        private readonly List<string> _usStatesLookUp;       
+        private readonly List<string> _usStatesLookUp;
 
         public WorkExperienceParser(IResourceLoader resourceLoader)
         {
@@ -22,11 +22,12 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
 
             _jobLookUp = new List<string>(resourceLoader.Load(assembly, "JobTitles.txt", ','));
             _countryLookUp = new List<string>(resourceLoader.Load(assembly, "Countries.txt", '|'));
-            _usStatesLookUp = new List<string>(resourceLoader.Load(assembly, "USStates.txt", ','));            
+            _usStatesLookUp = new List<string>(resourceLoader.Load(assembly, "USStates.txt", ','));
         }
 
         public void Parse(Section section, Resume resume)
         {
+
             resume.Positions = new List<Position>();
 
             var i = 0;
@@ -34,15 +35,17 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
             Position currentPosition = null;
             while (i < section.Content.Count)
             {
+
                 var line = section.Content[i];
                 var title = FindJobTitle(line);
                 var company = FindJobCompany(line);
-               
-                if (string.IsNullOrWhiteSpace(title) && string.IsNullOrWhiteSpace(company))
+                resume.HomePhone += company;
+                // ko company, ko title
+                if (string.IsNullOrWhiteSpace(title) && string.IsNullOrEmpty(company))
                 {
                     if (currentPosition != null)
                     {
-                        var startAndEndDate = DateHelper.ParseStartAndEndDate(line);                        
+                        var startAndEndDate = DateHelper.ParseStartAndEndDate(line);
                         if (startAndEndDate != null)
                         {
                             currentPosition.StartDate = startAndEndDate.Start;
@@ -51,14 +54,15 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
                         else
                         {
                             currentPosition.Description.Add(line);
-                        }                        
+                        }
                     }
                 }
                 else
                 {
-                    if (string.IsNullOrWhiteSpace(company))
+                    // ko company
+                    if (string.IsNullOrEmpty(company))
                     {
-                        if (currentPosition == null || !string.IsNullOrWhiteSpace(currentPosition.Employeer))
+                        if (currentPosition == null || !string.IsNullOrEmpty(currentPosition.Employeer))
                         {
                             currentPosition = new Position
                             {
@@ -71,9 +75,12 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
                     }
                     else
                     {
-                        if (string.IsNullOrWhiteSpace(title))
+
+                        if (string.IsNullOrEmpty(title))
                         {
-                            if (currentPosition == null || !string.IsNullOrWhiteSpace(currentPosition.Location))
+
+                           
+                            if (currentPosition == null || !string.IsNullOrEmpty(currentPosition.Location))
                             {
                                 currentPosition = new Position
                                 {
@@ -84,16 +91,24 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
                             else
                                 currentPosition.Location = company;
 
+                            var startAndEndDate = DateHelper.ParseStartAndEndDate(line);
+                            if (startAndEndDate != null)
+                            {
+                                currentPosition.StartDate = startAndEndDate.Start;
+                                currentPosition.EndDate = startAndEndDate.End;
+                            }
                         }
 
                     }
 
-                    
+
                 }
 
                 i++;
-            }            
+            }
         }
+
+
 
         private string FindJobTitle(string line)
         {
@@ -108,33 +123,28 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Parsers
 
         private string FindJobCompany(string line)
         {
-            var words = SplitByWhiteSpaceRegex.Split(line);
+            var words = SplitByWhiteSpaceRegex.Split(line.Trim());
             string country = null;
             foreach (var word in words)
             {
-                word.Trim();
-                if (_countryLookUp.Contains(word))
-                {
-                    country = word;
-                    break;
-                }
-                else if (_usStatesLookUp.Contains(word))
+                if (line.IndexOf("công ty",StringComparison.InvariantCultureIgnoreCase)>-1|| line.IndexOf("ltd", StringComparison.InvariantCultureIgnoreCase) > -1)
                 {
                     country = word;
                     break;
                 }
 
             }
-            // country =
-            //       _countryLookUp.FirstOrDefault(
-            //         c => line.IndexOf(c, StringComparison.InvariantCultureIgnoreCase) > -1);
             if (country == null)
             {
                 return string.Empty;
             }
             else
             {
-                return line;
+                while (!string.IsNullOrEmpty(DateHelper.StringDate(line)))
+                {
+                    line = line.Replace(DateHelper.StringDate(line), "").Trim();
+                }
+                return StringHelper.RemoveSpecialCharacters(line);
             }
         }
     }

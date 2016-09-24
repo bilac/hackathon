@@ -1,0 +1,84 @@
+{
+  "resume-language": "en",
+  "first-name": "Giang",
+  "last-name": "Le",
+  "salutation": null,
+  "d-o-b": "August 29th 1990",
+  "nationality": "Viet Nam",
+  "street-address": "106/15,Truong Van Thanh Street, Hiep Phu Ward, Dist 9, ",
+  "town": null,
+  "county_state": "HCM City",
+  "country": null,
+  "post-code": null,
+  "gender": "female",
+  "email-address": "testing2@gmail.com",
+  "home-phone": "Make payment, keep money, report to shop leader, support for partner. ",
+  "mobile-phone": "0905.555.666",
+  "work-phone": null,
+  "fax": null,
+  "address-full": "106/15,Truong Van Thanh Street, Hiep Phu Ward, Dist 9, HCM City.",
+  "position_expected": null,
+  "salary_expected": null,
+  "relocation": null,
+  "location_expected": null,
+  "marital_status": "Single",
+  "skills": [
+    "Good at communication skills",
+    "Speak English fluently",
+    "Microsoft Offices",
+    "Internet",
+    "Work in team or private well",
+    "Responsible for jobs",
+    "Interest",
+    "Reading",
+    "Traveling"
+  ],
+  "positions": [
+    {
+      "employeer": "Accountant",
+      "start-date": "1/2006",
+      "end-date": "12/2009",
+      "location": "Make payment, keep money, report to shop leader, support for partner. ",
+      "position_held": null,
+      "description": []
+    },
+    {
+      "employeer": "Sales Executive",
+      "start-date": "1/2010",
+      "end-date": "12/2014",
+      "location": null,
+      "position_held": null,
+      "description": [
+        "-  Have the practical knowledge about import and export activities. "
+      ]
+    },
+    {
+      "employeer": "Receptionist",
+      "start-date": "1/2014",
+      "end-date": "12/2016",
+      "location": null,
+      "position_held": null,
+      "description": [
+        "+ arrange room, make sure room is cleaned before checking in",
+        "+ check in, check out",
+        "+ make payment and keep money",
+        "+ answer phone, email, customer's questions.",
+        "+ Book tour and airline ticket, taxi"
+      ]
+    }
+  ],
+  "projects": [],
+  "social-profiles": [],
+  "educations": [
+    {
+      "school": "HCM University of Technology, Vietnam",
+      "degree": null,
+      "start-date": "2008",
+      "end-date": "2012",
+      "description": null,
+      "location": null
+    }
+  ],
+  "courses": [],
+  "awards": []
+}

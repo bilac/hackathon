@@ -59,17 +59,17 @@ namespace Sharpenter.ResumeParser.ResumeProcessor
             var sectionExtractor = new SectionExtractor();
             var sections = sectionExtractor.ExtractFrom(rawInput);
 
-            //string temp = "";
-            //foreach (var item in sections)
-            //{
-            //    temp += "-------------------------------------\r\n";
-            //    temp += item.Type.ToString() + "\r\n";
-            //    foreach (var item1 in item.Content)
-            //    {
-            //        temp += item1 + "\r\n";
-            //    }
-            //}
-            //return temp;
+            string temp = "";
+            foreach (var item in sections)
+            {
+                temp += "-------------------------------------\r\n";
+                temp += item.Type.ToString() + "\r\n";
+                foreach (var item1 in item.Content)
+                {
+                    temp += item1 + "\r\n";
+                }
+            }
+           // return temp;
 
             IResourceLoader resourceLoader = new CachedResourceLoader(new ResourceLoader());
             var resumeBuilder = new ResumeBuilder(resourceLoader);

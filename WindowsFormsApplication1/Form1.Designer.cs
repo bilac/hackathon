@@ -52,7 +52,6 @@
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            this.fileSystemWatcher1.Changed += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Changed);
             // 
             // button1
             // 
@@ -73,7 +72,6 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "v";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
