@@ -32,7 +32,8 @@ namespace Sharpenter.ResumeParser.ResumeProcessor.Helpers
             var mostCertainLanguage = languages.FirstOrDefault();
             if (mostCertainLanguage != null)
             {
-                return mostCertainLanguage.Item1.Iso639_3;
+                
+                return mostCertainLanguage.Item1.Iso639_3=="simple" ? "en":mostCertainLanguage.Item1.Iso639_3;
             }
             return null;
         }
